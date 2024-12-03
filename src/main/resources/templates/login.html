@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+<h2>Welcome To Login Page</h2>
+
+<!-- Use th:action here to make sure Thymeleaf resolves the URL correctly -->
+<form th:action="@{/login}" method="post" th:object="${employee}">
+    <label>Enter Username :</label>
+    <input type="text" id="username" th:field="*{username}"><br><br>
+
+    <label>Enter Password :</label>
+    <input type="password" id="password" th:field="*{password}"><br><br>
+
+    <button type="submit">Login</button>
+</form>
+
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+</head>
+<body>
+<h1>Welcome To EMS</h1>
+<a th:href="@{/register}"><button>Registration</button></a>
+<a th:href="@{/loginpage}"><button>Login</button></a>
+
+
+<!--When Thymeleaf processes the template, @{/register} will become /register, -->
+<!--and @{/loginpage} will become /loginpage, creating links to these endpoints.-->
+</body>
+</html>

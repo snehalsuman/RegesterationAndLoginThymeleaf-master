@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome Page</title>
+</head>
+<body>
+<h1>Welcome!</h1>
+<table>
+    <tr>
+        <td>Emp Name:</td>
+        <td th:text="${employee.name}"></td>
+    </tr>
+    <tr>
+        <td>Emp DOB:</td>
+        <td th:text="${employee.dob}"></td>
+    </tr>
+    <tr>
+        <td>Emp Technologies:</td>
+        <td>
+            <ul>
+                <li th:each="tech : ${employee.technology}" th:text="${tech}"></li>
+            </ul>
+        </td>
+    </tr>
+</table>
+<a th:href="@{/login}"><button>Logout</button></a>
+</body>
+</html>
